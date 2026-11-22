@@ -1,0 +1,13 @@
+{
+ "breakdown": {
+  "own CNA v3.1": 31861,
+  "v3.1 from another source (NVD or ADP)": 10881,
+  "v3.0 only": 331,
+  "no v3.x": 3370
+ },
+ "github": {
+  "n": 4584,
+  "own_v31": 4578
+ },
+ "n": 46443
+}

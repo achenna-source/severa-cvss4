@@ -1,6 +1,8 @@
-# SEVERA: exact score-risk decoding and provenance-calibrated abstention for CVSS v4.0 vector prediction
+# Knowing When Not to Score: Certified CVSS v4.0 Prediction for Newly Disclosed Vulnerabilities
 
-This repository contains the data snapshot, code, model outputs and analysis scripts of the paper of the same title. Every number, table and figure of the paper can be regenerated on a CPU from the files here; only the training of the perception modules needs a GPU (free Kaggle T4), and their outputs are included.
+Code, data and predictions of SEVERA, the method of the paper.
+
+This repository contains the data snapshot, code, model outputs and analysis scripts of the paper. Every number, table and figure of the paper can be regenerated on a CPU from the files here; only the training of the perception modules needs a GPU (free Kaggle T4), and their outputs are included.
 
 ## What SEVERA does
 
@@ -22,9 +24,9 @@ Given what is known when a CVE record is published (the description, the CNA's C
 | `data/SHA256SUMS_uncompressed.txt` | Digests of the uncompressed published data files |
 | `code/` | Data collection, splits, knowledge base, inference engine, abstention, analyses, tables, figures |
 | `kaggle/` | Training and prompting scripts run on Kaggle |
-| `kaggle_out/` | Per-metric probabilities of every perception module (dev, calibration, test, deployment) and B4 generations |
+| `kaggle_out/` | Per-metric probabilities of every perception module (dev, calibration, test, and deployment for DeBERTa): DeBERTa-v3-base and Qwen2.5-7B, three seeds each; B4 generations |
 | `results/` | Per-system result files and per-CVE predictions on the test split |
-| `figures/` | Figures of the paper |
+| `figures/` | Figures of the paper and the graphical abstract |
 | `PROTOCOL.md` | The evaluation protocol frozen before the experiments, with every amendment |
 
 ## Reproducing the results

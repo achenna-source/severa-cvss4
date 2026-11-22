@@ -185,7 +185,7 @@ for label, names in groups:
         F[f"{tag}_{dt}_KAPPA"] = f"{np.mean([J[s][dec]['test']['band_kappa'] for s in names]):.2f}"
     b = np.mean([J[s]["base_argmax"]["test"]["score_mae"] for s in names]); v = np.mean([J[s]["ours_score"]["test"]["score_mae"] for s in names])
     F[f"{tag}_MAE_REL"] = f"{100 * (b - v) / b:.0f}%"
-    F[f"{tag}_BAND_GAIN"] = f"{100 * (np.mean([J[s]['ours_score']['test']['band_acc'] for s in names]) - np.mean([J[s]['base_argmax']['test']['band_acc'] for s in names])):.1f}"
+    F[f"{tag}_BAND_GAIN"] = f"{round(100 * np.mean([J[s]['ours_score']['test']['band_acc'] for s in names]), 1) - round(100 * np.mean([J[s]['base_argmax']['test']['band_acc'] for s in names]), 1):.1f}"
     F[f"{tag}_NSEEDS"] = str(len(names))
 e = J[prim]
 F["MBR_ONLY_MAE"] = f"{e['base_score_mbr']['test']['score_mae']:.2f}"; F["MBR_ONLY_BAND"] = pct(e["base_score_mbr"]["test"]["band_acc"])
@@ -244,7 +244,7 @@ if os.path.exists(rv_path):
     F["MONTHLY_ABOVE_005"] = f"{mc['0.05']['above_alpha']} of {mc['0.05']['cells_n>=30']}"
     F["MONTHLY_ABOVE_015"] = f"{mc['0.15']['above_alpha']} of {mc['0.15']['cells_n>=30']}"
     sb, sm = rv["signflip_band"], rv["signflip_mae"]
-    F["SIGNFLIP_BAND_P"] = f"{sb[1]:.4f}" if sb[1] >= 0.0001 else "< 0.0001"; F["SIGNFLIP_MAE_P"] = f"{sm[1]:.4f}" if sm[1] >= 0.0001 else "< 0.0001"
+    F["SIGNFLIP_BAND_P"] = f"= {sb[1]:.3f}" if sb[1] >= 0.001 else "< 0.001"; F["SIGNFLIP_MAE_P"] = f"= {sm[1]:.3f}" if sm[1] >= 0.001 else "< 0.001"
     F["N_CNA_CLUSTERS"] = str(sb[2])
     la = rv["leakage_audit"]
     F["CUE_SHARE"] = pct(la["share_with_cue"]); F["CUE_SHARE_VULDB"] = pct(la["by_group"]["VulDB"])
@@ -285,13 +285,14 @@ if os.path.exists(rv_path):
         BN = ["None", "Low", "Medium", "High", "Critical"]
         av, sv = idx_to_vec(w["argmax_idx"]), idx_to_vec(w["severa_idx"])
         bp = w["band_probs"]
+        sb = band_of(w["severa_score"]); ab_ = band_of(w["argmax_score"])
         F["RES_EXAMPLE_TEXT"] = (
             f"A test example shows the mechanism. For {w['id']} ({', '.join(w['cwe']) or 'no CWE'}"
             f"{', with a CNA version 3.1 vector' if w['has_v31'] else ''}), per-metric decoding returns "
-            f"{av.replace('CVSS:4.0/', '')}, scored {w['argmax_score']:.1f} ({BN[band_of(w['argmax_score'])]}). "
-            f"The predictive distribution of SEVERA puts {100 * bp[3] + 100 * bp[4]:.0f}% of its mass on High or Critical, "
+            f"{av.replace('CVSS:4.0/', '')}, scored {w['argmax_score']:.1f} ({BN[ab_]}). "
+            f"SEVERA's predictive distribution puts {100 * bp[sb]:.0f}% of its mass on the {BN[sb]} band, "
             f"and the score-risk decision returns {sv.replace('CVSS:4.0/', '')}, scored {w['severa_score']:.1f} "
-            f"({BN[band_of(w['severa_score'])]}), the band of the CNA's own vector ({w['label_score']:.1f}). "
-            f"In the test split, {json.load(open(rv_path))['n_worked_candidates']:,} VulnCheck vulnerabilities are corrected from a lower band to the right one in this way.")
+            f"({BN[sb]}), which is the CNA's own vector. "
+            f"In the test split, {json.load(open(rv_path))['n_worked_candidates']:,} VulnCheck vulnerabilities are moved in this way from a lower band to the correct one.")
 json.dump(F, open(os.path.join(ROOT, "manuscript", "fills_results.json"), "w", encoding="utf-8"), indent=1, ensure_ascii=False)
 print("deberta gate and example keys written")

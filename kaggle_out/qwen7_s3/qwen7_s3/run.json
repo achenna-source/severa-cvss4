@@ -1,0 +1,17 @@
+{
+ "data": "/kaggle/input/<private-dataset>/splits.jsonl",
+ "backbone": "llm",
+ "model": "Qwen/Qwen2.5-7B-Instruct",
+ "seed": 3,
+ "epochs": 1.0,
+ "lr": null,
+ "bs": 4,
+ "accum": 4,
+ "max_len": 384,
+ "use_v31": 1,
+ "train_limit": 0,
+ "out": "/kaggle/working/qwen7_s3",
+ "no_deploy": true,
+ "n_train": 19506,
+ "minutes": 426.6598286271095
+}

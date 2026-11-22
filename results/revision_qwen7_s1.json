@@ -1,0 +1,1032 @@
+{
+ "ablation_extra": {
+  "K2 + Bayes (score)": {
+   "n": 19648,
+   "exact_vector": 0.46701954397394135,
+   "macrovector": 0.6765065146579805,
+   "score_mae": 0.4813161790370941,
+   "band_acc": 0.8217630293159609,
+   "band_kappa": 0.7871387702542124,
+   "acc_AV": 0.9438110749185668,
+   "f1_AV": 0.7872098512971366,
+   "acc_AC": 0.9230964983713354,
+   "f1_AC": 0.7630982132337502,
+   "acc_AT": 0.8110749185667753,
+   "f1_AT": 0.6760090613401024,
+   "acc_PR": 0.8854336319218241,
+   "f1_PR": 0.8354380900853758,
+   "acc_UI": 0.8602911237785016,
+   "f1_UI": 0.6178370949354758,
+   "acc_VC": 0.8428338762214984,
+   "f1_VC": 0.837672184901033,
+   "acc_VI": 0.8459385179153095,
+   "f1_VI": 0.8424522416463255,
+   "acc_VA": 0.8868587133550488,
+   "f1_VA": 0.8763707377917277,
+   "acc_SC": 0.880853013029316,
+   "f1_SC": 0.6981280434918405,
+   "acc_SI": 0.8894543973941368,
+   "f1_SI": 0.6791625875812887,
+   "acc_SA": 0.9295602605863192,
+   "f1_SA": 0.5825556674799331,
+   "mean_metric_acc": 0.8817460023689665,
+   "mean_metric_f1": 0.7450848885258172
+  },
+  "recalibration + Bayes (score)": {
+   "n": 19648,
+   "exact_vector": 0.42961115635179153,
+   "macrovector": 0.6285627035830619,
+   "score_mae": 0.5530537366867065,
+   "band_acc": 0.7885280944625407,
+   "band_kappa": 0.7446109610044778,
+   "acc_AV": 0.9427931596091205,
+   "f1_AV": 0.79530979801146,
+   "acc_AC": 0.9208570846905537,
+   "f1_AC": 0.740144898504052,
+   "acc_AT": 0.8070541530944625,
+   "f1_AT": 0.668253005142322,
+   "acc_PR": 0.884110342019544,
+   "f1_PR": 0.8360763497543814,
+   "acc_UI": 0.8617162052117264,
+   "f1_UI": 0.6214100939376382,
+   "acc_VC": 0.8215594462540716,
+   "f1_VC": 0.8174047151383196,
+   "acc_VI": 0.8234934853420195,
+   "f1_VI": 0.8204667262544322,
+   "acc_VA": 0.8708774429967426,
+   "f1_VA": 0.862919448959398,
+   "acc_SC": 0.8591714169381107,
+   "f1_SC": 0.6081423187694647,
+   "acc_SI": 0.8672638436482085,
+   "f1_SI": 0.5984551899526093,
+   "acc_SA": 0.9212133550488599,
+   "f1_SA": 0.5186406663889791,
+   "mean_metric_acc": 0.8709190849866745,
+   "mean_metric_f1": 0.717020291892096
+  },
+  "K1+K2+K3, joint MAP": {
+   "n": 19648,
+   "exact_vector": 0.49104234527687296,
+   "macrovector": 0.6655130293159609,
+   "score_mae": 0.7552677392959595,
+   "band_acc": 0.7825223941368078,
+   "band_kappa": 0.6357536249388535,
+   "acc_AV": 0.9453888436482085,
+   "f1_AV": 0.7501704483668414,
+   "acc_AC": 0.9159201954397395,
+   "f1_AC": 0.7550927302932942,
+   "acc_AT": 0.8140268729641694,
+   "f1_AT": 0.6640432697275127,
+   "acc_PR": 0.9039596905537459,
+   "f1_PR": 0.859359208952078,
+   "acc_UI": 0.8639556188925082,
+   "f1_UI": 0.6109674213168769,
+   "acc_VC": 0.8542345276872965,
+   "f1_VC": 0.8488526367482501,
+   "acc_VI": 0.8563721498371335,
+   "f1_VI": 0.8526170313010571,
+   "acc_VA": 0.895510993485342,
+   "f1_VA": 0.8844291696523454,
+   "acc_SC": 0.8738293973941368,
+   "f1_SC": 0.7245298075806157,
+   "acc_SI": 0.8769340390879479,
+   "f1_SI": 0.7139537589333368,
+   "acc_SA": 0.9011604234527687,
+   "f1_SA": 0.5995681778811557,
+   "mean_metric_acc": 0.8819357047675452,
+   "mean_metric_f1": 0.7512348782503058
+  }
+ },
+ "hybrid_B3_else_base": {
+  "n": 19648,
+  "exact_vector": 0.48732695439739415,
+  "macrovector": 0.6485647394136808,
+  "score_mae": 0.6812958121299744,
+  "band_acc": 0.7868485342019544,
+  "band_kappa": 0.6984706696437875,
+  "acc_AV": 0.9357695439739414,
+  "f1_AV": 0.7970151549811861,
+  "acc_AC": 0.9140370521172638,
+  "f1_AC": 0.6898173653612234,
+  "acc_AT": 0.8126526872964169,
+  "f1_AT": 0.5877001815134685,
+  "acc_PR": 0.870928338762215,
+  "f1_PR": 0.8262161471840807,
+  "acc_UI": 0.8566775244299675,
+  "f1_UI": 0.6131422684700752,
+  "acc_VC": 0.817385993485342,
+  "f1_VC": 0.8121857062770615,
+  "acc_VI": 0.8258855863192183,
+  "f1_VI": 0.821243408621655,
+  "acc_VA": 0.8563212540716613,
+  "f1_VA": 0.8389317029385895,
+  "acc_SC": 0.8869096091205212,
+  "f1_SC": 0.6814104688332338,
+  "acc_SI": 0.8899633550488599,
+  "f1_SI": 0.6674664420171301,
+  "acc_SA": 0.9229438110749185,
+  "f1_SA": 0.5929429463137558,
+  "mean_metric_acc": 0.8717704323363933,
+  "mean_metric_f1": 0.7207337993192238
+ },
+ "hybrid_B3_else_SEVERA": {
+  "n": 19648,
+  "exact_vector": 0.47027687296416937,
+  "macrovector": 0.6305985342019544,
+  "score_mae": 0.5865228176116943,
+  "band_acc": 0.7961115635179153,
+  "band_kappa": 0.7495007815841015,
+  "acc_AV": 0.9231982899022801,
+  "f1_AV": 0.7069276986485789,
+  "acc_AC": 0.9027381921824105,
+  "f1_AC": 0.6881101530127509,
+  "acc_AT": 0.779621335504886,
+  "f1_AT": 0.622918105207518,
+  "acc_PR": 0.8435973127035831,
+  "f1_PR": 0.789435756717519,
+  "acc_UI": 0.8469055374592834,
+  "f1_UI": 0.6065136750443214,
+  "acc_VC": 0.8143831433224755,
+  "f1_VC": 0.8090669941335166,
+  "acc_VI": 0.8127544788273615,
+  "f1_VI": 0.8095948934305648,
+  "acc_VA": 0.8498574918566775,
+  "f1_VA": 0.8334663657373195,
+  "acc_SC": 0.861003664495114,
+  "f1_SC": 0.6855971145047741,
+  "acc_SI": 0.868332654723127,
+  "f1_SI": 0.6773578779160131,
+  "acc_SA": 0.902839983713355,
+  "f1_SA": 0.5804423354414538,
+  "mean_metric_acc": 0.855021098608232,
+  "mean_metric_f1": 0.7099482699813028
+ },
+ "v31_band_as_v4_band": {
+  "n": 12656,
+  "band_acc": 0.7252686472819216
+ },
+ "SEVERA_band_on_v31_subset": 0.943109987357775,
+ "band_ece": 0.011622174642980099,
+ "band_nll": 0.5376612544059753,
+ "confidence_auroc_by_group": {
+  "GitHub": 0.5704571083149881,
+  "Other": 0.7183469087082347,
+  "VulDB": 0.9923037566811447,
+  "VulnCheck": 0.860843816881621
+ },
+ "answered_under_over": {
+  "answered": 12401,
+  "under": 352,
+  "over": 257
+ },
+ "critical_recall": {
+  "GitHub": {
+   "n_critical": 212,
+   "recall_all": 0.42924528301886794,
+   "answered": 0,
+   "recall_answered": null
+  },
+  "Other": {
+   "n_critical": 898,
+   "recall_all": 0.5634743875278396,
+   "answered": 312,
+   "recall_answered": 0.9102564102564102
+  },
+  "VulDB": {
+   "n_critical": 295,
+   "recall_all": 0.8067796610169492,
+   "answered": 295,
+   "recall_answered": 0.8067796610169492
+  },
+  "VulnCheck": {
+   "n_critical": 913,
+   "recall_all": 0.8630887185104053,
+   "answered": 814,
+   "recall_answered": 0.9017199017199017
+  }
+ },
+ "clopper_pearson": {
+  "0.05": {
+   "GitHub": {
+    "n": 0,
+    "k": 0,
+    "risk": null,
+    "cp95": null
+   },
+   "Other": {
+    "n": 0,
+    "k": 0,
+    "risk": null,
+    "cp95": null
+   },
+   "VulDB": {
+    "n": 3173,
+    "k": 59,
+    "risk": 0.018594390167034354,
+    "cp95": [
+     0.01418428306643778,
+     0.023920581174196768
+    ]
+   },
+   "VulnCheck": {
+    "n": 5979,
+    "k": 107,
+    "risk": 0.017895969225623014,
+    "cp95": [
+     0.01468876377327764,
+     0.021584995043315496
+    ]
+   },
+   "All": {
+    "n": 9152,
+    "k": 166,
+    "risk": 0.018138111888111888,
+    "cp95": [
+     0.01550360880686163,
+     0.021085329036008307
+    ]
+   }
+  },
+  "0.1": {
+   "GitHub": {
+    "n": 0,
+    "k": 0,
+    "risk": null,
+    "cp95": null
+   },
+   "Other": {
+    "n": 1753,
+    "k": 182,
+    "risk": 0.1038220193953223,
+    "cp95": [
+     0.08992987624873652,
+     0.11905555909988715
+    ]
+   },
+   "VulDB": {
+    "n": 3173,
+    "k": 59,
+    "risk": 0.018594390167034354,
+    "cp95": [
+     0.01418428306643778,
+     0.023920581174196768
+    ]
+   },
+   "VulnCheck": {
+    "n": 7475,
+    "k": 368,
+    "risk": 0.04923076923076923,
+    "cp95": [
+     0.044435948460495464,
+     0.05438086462160577
+    ]
+   },
+   "All": {
+    "n": 12401,
+    "k": 609,
+    "risk": 0.04910894282719135,
+    "cp95": [
+     0.04537148967873227,
+     0.05305978429871884
+    ]
+   }
+  },
+  "0.15": {
+   "GitHub": {
+    "n": 0,
+    "k": 0,
+    "risk": null,
+    "cp95": null
+   },
+   "Other": {
+    "n": 2050,
+    "k": 252,
+    "risk": 0.12292682926829268,
+    "cp95": [
+     0.1090158560495143,
+     0.1379257908566459
+    ]
+   },
+   "VulDB": {
+    "n": 3173,
+    "k": 59,
+    "risk": 0.018594390167034354,
+    "cp95": [
+     0.01418428306643778,
+     0.023920581174196768
+    ]
+   },
+   "VulnCheck": {
+    "n": 7814,
+    "k": 522,
+    "risk": 0.06680317379063219,
+    "cp95": [
+     0.061365549040848476,
+     0.07256654144109156
+    ]
+   },
+   "All": {
+    "n": 13037,
+    "k": 833,
+    "risk": 0.06389506788371557,
+    "cp95": [
+     0.05975630151068167,
+     0.06822978516569796
+    ]
+   }
+  }
+ },
+ "mondrian_prov_x_v31": {
+  "0.05": {
+   "coverage": 0.4654417752442997,
+   "risk": 0.01771459814106069,
+   "thresholds": {
+    "GitHub|nov31": Infinity,
+    "Other|nov31": Infinity,
+    "Other|v31": Infinity,
+    "VulDB|v31": 0.5,
+    "VulnCheck|nov31": Infinity,
+    "VulnCheck|v31": 0.89
+   },
+   "GitHub|nov31": {
+    "n": 2036,
+    "coverage": 0.0,
+    "risk": null
+   },
+   "Other|nov31": {
+    "n": 4759,
+    "coverage": 0.0,
+    "risk": null
+   },
+   "Other|v31": {
+    "n": 1788,
+    "coverage": 0.0,
+    "risk": null
+   },
+   "VulDB|v31": {
+    "n": 3173,
+    "coverage": 1.0,
+    "risk": 0.018594390167034354
+   },
+   "VulnCheck|nov31": {
+    "n": 197,
+    "coverage": 0.0,
+    "risk": null
+   },
+   "VulnCheck|v31": {
+    "n": 7695,
+    "coverage": 0.7760883690708252,
+    "risk": 0.01724715338245144
+   }
+  },
+  "0.1": {
+   "coverage": 0.6275956840390879,
+   "risk": 0.045495093666369314,
+   "thresholds": {
+    "GitHub|nov31": Infinity,
+    "Other|nov31": Infinity,
+    "Other|v31": 0.61,
+    "VulDB|v31": 0.5,
+    "VulnCheck|nov31": Infinity,
+    "VulnCheck|v31": 0.59
+   },
+   "GitHub|nov31": {
+    "n": 2036,
+    "coverage": 0.0,
+    "risk": null
+   },
+   "Other|nov31": {
+    "n": 4759,
+    "coverage": 0.0,
+    "risk": null
+   },
+   "Other|v31": {
+    "n": 1788,
+    "coverage": 0.964765100671141,
+    "risk": 0.08985507246376812
+   },
+   "VulDB|v31": {
+    "n": 3173,
+    "coverage": 1.0,
+    "risk": 0.018594390167034354
+   },
+   "VulnCheck|nov31": {
+    "n": 197,
+    "coverage": 0.0,
+    "risk": null
+   },
+   "VulnCheck|v31": {
+    "n": 7695,
+    "coverage": 0.9659519168291099,
+    "risk": 0.04668370778958698
+   }
+  },
+  "0.15": {
+   "coverage": 0.6426099348534202,
+   "risk": 0.05504514493901473,
+   "thresholds": {
+    "GitHub|nov31": Infinity,
+    "Other|nov31": Infinity,
+    "Other|v31": 0.5,
+    "VulDB|v31": 0.5,
+    "VulnCheck|nov31": Infinity,
+    "VulnCheck|v31": 0.5
+   },
+   "GitHub|nov31": {
+    "n": 2036,
+    "coverage": 0.0,
+    "risk": null
+   },
+   "Other|nov31": {
+    "n": 4759,
+    "coverage": 0.0,
+    "risk": null
+   },
+   "Other|v31": {
+    "n": 1788,
+    "coverage": 0.9966442953020134,
+    "risk": 0.10101010101010101
+   },
+   "VulDB|v31": {
+    "n": 3173,
+    "coverage": 1.0,
+    "risk": 0.018594390167034354
+   },
+   "VulnCheck|nov31": {
+    "n": 197,
+    "coverage": 0.0,
+    "risk": null
+   },
+   "VulnCheck|v31": {
+    "n": 7695,
+    "coverage": 0.9968810916179337,
+    "risk": 0.05944466171294486
+   }
+  }
+ },
+ "monthly_cells": {
+  "0.05": {
+   "cells_n>=30": 10,
+   "above_alpha": 0
+  },
+  "0.1": {
+   "cells_n>=30": 15,
+   "above_alpha": 3
+  },
+  "0.15": {
+   "cells_n>=30": 15,
+   "above_alpha": 1
+  }
+ },
+ "monthly_cells_detail": [
+  {
+   "alpha": "0.05",
+   "month": "2026-07",
+   "group": "VulDB",
+   "n": 440,
+   "risk": 0.0
+  },
+  {
+   "alpha": "0.05",
+   "month": "2026-07",
+   "group": "VulnCheck",
+   "n": 478,
+   "risk": 0.029288702928870293
+  },
+  {
+   "alpha": "0.05",
+   "month": "2026-08",
+   "group": "VulDB",
+   "n": 683,
+   "risk": 0.02342606149341142
+  },
+  {
+   "alpha": "0.05",
+   "month": "2026-08",
+   "group": "VulnCheck",
+   "n": 863,
+   "risk": 0.047508690614136734
+  },
+  {
+   "alpha": "0.05",
+   "month": "2026-09",
+   "group": "VulDB",
+   "n": 913,
+   "risk": 0.019715224534501644
+  },
+  {
+   "alpha": "0.05",
+   "month": "2026-09",
+   "group": "VulnCheck",
+   "n": 1143,
+   "risk": 0.008748906386701663
+  },
+  {
+   "alpha": "0.05",
+   "month": "2026-10",
+   "group": "VulDB",
+   "n": 754,
+   "risk": 0.015915119363395226
+  },
+  {
+   "alpha": "0.05",
+   "month": "2026-10",
+   "group": "VulnCheck",
+   "n": 1990,
+   "risk": 0.01256281407035176
+  },
+  {
+   "alpha": "0.05",
+   "month": "2026-11",
+   "group": "VulDB",
+   "n": 383,
+   "risk": 0.033942558746736295
+  },
+  {
+   "alpha": "0.05",
+   "month": "2026-11",
+   "group": "VulnCheck",
+   "n": 1505,
+   "risk": 0.011295681063122924
+  },
+  {
+   "alpha": "0.1",
+   "month": "2026-07",
+   "group": "Other",
+   "n": 255,
+   "risk": 0.09019607843137255
+  },
+  {
+   "alpha": "0.1",
+   "month": "2026-07",
+   "group": "VulDB",
+   "n": 440,
+   "risk": 0.0
+  },
+  {
+   "alpha": "0.1",
+   "month": "2026-07",
+   "group": "VulnCheck",
+   "n": 651,
+   "risk": 0.0890937019969278
+  },
+  {
+   "alpha": "0.1",
+   "month": "2026-08",
+   "group": "Other",
+   "n": 293,
+   "risk": 0.13651877133105803
+  },
+  {
+   "alpha": "0.1",
+   "month": "2026-08",
+   "group": "VulDB",
+   "n": 683,
+   "risk": 0.02342606149341142
+  },
+  {
+   "alpha": "0.1",
+   "month": "2026-08",
+   "group": "VulnCheck",
+   "n": 1130,
+   "risk": 0.0831858407079646
+  },
+  {
+   "alpha": "0.1",
+   "month": "2026-09",
+   "group": "Other",
+   "n": 405,
+   "risk": 0.1037037037037037
+  },
+  {
+   "alpha": "0.1",
+   "month": "2026-09",
+   "group": "VulDB",
+   "n": 913,
+   "risk": 0.019715224534501644
+  },
+  {
+   "alpha": "0.1",
+   "month": "2026-09",
+   "group": "VulnCheck",
+   "n": 1493,
+   "risk": 0.03549899531145345
+  },
+  {
+   "alpha": "0.1",
+   "month": "2026-10",
+   "group": "Other",
+   "n": 484,
+   "risk": 0.08677685950413223
+  },
+  {
+   "alpha": "0.1",
+   "month": "2026-10",
+   "group": "VulDB",
+   "n": 754,
+   "risk": 0.015915119363395226
+  },
+  {
+   "alpha": "0.1",
+   "month": "2026-10",
+   "group": "VulnCheck",
+   "n": 2364,
+   "risk": 0.04145516074450085
+  },
+  {
+   "alpha": "0.1",
+   "month": "2026-11",
+   "group": "Other",
+   "n": 316,
+   "risk": 0.11075949367088607
+  },
+  {
+   "alpha": "0.1",
+   "month": "2026-11",
+   "group": "VulDB",
+   "n": 383,
+   "risk": 0.033942558746736295
+  },
+  {
+   "alpha": "0.1",
+   "month": "2026-11",
+   "group": "VulnCheck",
+   "n": 1837,
+   "risk": 0.035383777898747956
+  },
+  {
+   "alpha": "0.15",
+   "month": "2026-07",
+   "group": "Other",
+   "n": 292,
+   "risk": 0.1232876712328767
+  },
+  {
+   "alpha": "0.15",
+   "month": "2026-07",
+   "group": "VulDB",
+   "n": 440,
+   "risk": 0.0
+  },
+  {
+   "alpha": "0.15",
+   "month": "2026-07",
+   "group": "VulnCheck",
+   "n": 689,
+   "risk": 0.11030478955007257
+  },
+  {
+   "alpha": "0.15",
+   "month": "2026-08",
+   "group": "Other",
+   "n": 358,
+   "risk": 0.15083798882681565
+  },
+  {
+   "alpha": "0.15",
+   "month": "2026-08",
+   "group": "VulDB",
+   "n": 683,
+   "risk": 0.02342606149341142
+  },
+  {
+   "alpha": "0.15",
+   "month": "2026-08",
+   "group": "VulnCheck",
+   "n": 1212,
+   "risk": 0.10726072607260725
+  },
+  {
+   "alpha": "0.15",
+   "month": "2026-09",
+   "group": "Other",
+   "n": 471,
+   "risk": 0.12738853503184713
+  },
+  {
+   "alpha": "0.15",
+   "month": "2026-09",
+   "group": "VulDB",
+   "n": 913,
+   "risk": 0.019715224534501644
+  },
+  {
+   "alpha": "0.15",
+   "month": "2026-09",
+   "group": "VulnCheck",
+   "n": 1568,
+   "risk": 0.056760204081632654
+  },
+  {
+   "alpha": "0.15",
+   "month": "2026-10",
+   "group": "Other",
+   "n": 553,
+   "risk": 0.0867992766726944
+  },
+  {
+   "alpha": "0.15",
+   "month": "2026-10",
+   "group": "VulDB",
+   "n": 754,
+   "risk": 0.015915119363395226
+  },
+  {
+   "alpha": "0.15",
+   "month": "2026-10",
+   "group": "VulnCheck",
+   "n": 2455,
+   "risk": 0.05539714867617108
+  },
+  {
+   "alpha": "0.15",
+   "month": "2026-11",
+   "group": "Other",
+   "n": 376,
+   "risk": 0.14361702127659576
+  },
+  {
+   "alpha": "0.15",
+   "month": "2026-11",
+   "group": "VulDB",
+   "n": 383,
+   "risk": 0.033942558746736295
+  },
+  {
+   "alpha": "0.15",
+   "month": "2026-11",
+   "group": "VulnCheck",
+   "n": 1890,
+   "risk": 0.04814814814814815
+  }
+ ],
+ "signflip_band": [
+  0.03735749185667753,
+  0.0076,
+  245
+ ],
+ "signflip_mae": [
+  -0.17548860746651207,
+  0.0,
+  245
+ ],
+ "leakage_audit": {
+  "share_with_cue": 0.006056596091205212,
+  "by_group": {
+   "GitHub": 0.0,
+   "Other": 0.014663204521154728,
+   "VulDB": 0.006618342262842736,
+   "VulnCheck": 0.00025342118601115053
+  },
+  "SEVERA_band_with_cue": 0.6470588235294118,
+  "SEVERA_band_without_cue": 0.8124327922576681,
+  "base_band_without_cue": 0.7743868093604384,
+  "SEVERA_mae_without_cue": 0.49766501784324646,
+  "base_mae_without_cue": 0.6732448935508728
+ },
+ "explain_validation": {
+  "abstained": 7247,
+  "abstained_with_any_wrong_metric": 6190,
+  "flagged_metric_wrong_given_any_wrong": 0.5318255250403877,
+  "chance_rate": 0.27879277426934934,
+  "flagged_metric_wrong_given_band_wrong": 0.6708901884340481
+ },
+ "worked_examples": [
+  {
+   "id": "CVE-2026-59099",
+   "cwe": [
+    "CWE-323"
+   ],
+   "has_v31": true,
+   "label": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+   "label_score": 9.300000190734863,
+   "argmax_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+   "severa_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+   "argmax_idx": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "argmax_score": 8.699999809265137,
+   "severa_idx": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    2,
+    2
+   ],
+   "severa_score": 9.300000190734863,
+   "band_probs": [
+    0.0,
+    0.0,
+    0.0,
+    0.023000000044703484,
+    0.9769999980926514
+   ],
+   "description": "Apereo CAS 7.3.0 before 8.0.0-RC6 contains a cryptographic vulnerability that allows remote unauthenticated attackers to recover plaintext conversation state by exploiting AES-GCM initialization vector reuse across the server lifetime. Attackers can collect multiple client-side webflow execution tokens from the unauthenticated login page and perform known-plaintext analysis to decrypt the webflow "
+  },
+  {
+   "id": "CVE-2026-59713",
+   "cwe": [
+    "CWE-352"
+   ],
+   "has_v31": true,
+   "label": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+   "label_score": 8.600000381469727,
+   "argmax_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+   "severa_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+   "argmax_idx": [
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "argmax_score": 5.099999904632568,
+   "severa_idx": [
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    2,
+    2,
+    2,
+    2
+   ],
+   "severa_score": 8.5,
+   "band_probs": [
+    0.0,
+    0.0,
+    0.006000000052154064,
+    0.9890000224113464,
+    0.004999999888241291
+   ],
+   "description": "Leantime contains an OIDC login CSRF vulnerability in the verifyState() method that unconditionally returns true without validating state parameters. Attackers can craft malicious callback URLs with attacker-controlled authorization codes to perform session fixation, logging victims in as the attacker."
+  },
+  {
+   "id": "CVE-2026-59706",
+   "cwe": [
+    "CWE-306"
+   ],
+   "has_v31": true,
+   "label": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:H/SI:L/SA:N",
+   "label_score": 9.199999809265137,
+   "argmax_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:L/SI:L/SA:N",
+   "severa_vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:L/VA:N/SC:H/SI:L/SA:L",
+   "argmax_idx": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    1,
+    1,
+    2
+   ],
+   "argmax_score": 8.699999809265137,
+   "severa_idx": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    2,
+    0,
+    1,
+    1
+   ],
+   "severa_score": 9.100000381469727,
+   "band_probs": [
+    0.0,
+    0.0,
+    0.004999999888241291,
+    0.14399999380111694,
+    0.8500000238418579
+   ],
+   "description": "mem0 contains unauthenticated config API endpoints that expose LLM API keys in plaintext and allow server-side request forgery via attacker-controlled ollama_base_url parameter. Unauthenticated attackers can retrieve stored secrets like OpenAI API keys via GET /api/v1/config/ or trigger SSRF attacks by setting ollama_base_url to internal addresses like cloud IMDS via PUT /api/v1/config/mem0/llm en"
+  },
+  {
+   "id": "CVE-2026-59702",
+   "cwe": [
+    "CWE-918"
+   ],
+   "has_v31": true,
+   "label": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:H/SI:L/SA:N",
+   "label_score": 9.199999809265137,
+   "argmax_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
+   "severa_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:L/SA:N",
+   "argmax_idx": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    2,
+    1,
+    1,
+    2
+   ],
+   "argmax_score": 6.900000095367432,
+   "severa_idx": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    0,
+    1,
+    2
+   ],
+   "severa_score": 9.199999809265137,
+   "band_probs": [
+    0.0,
+    0.0,
+    0.03200000151991844,
+    0.28299999237060547,
+    0.6850000023841858
+   ],
+   "description": "repomix contains a server-side request forgery vulnerability in the POST /api/pack endpoint that allows unauthenticated attackers to make arbitrary outbound requests. The endpoint fails to properly validate http://, https://, and file:// URLs before passing them to git clone, enabling attackers to access private network addresses, GCP metadata services, or local filesystem paths."
+  },
+  {
+   "id": "CVE-2026-59261",
+   "cwe": [
+    "CWE-184"
+   ],
+   "has_v31": true,
+   "label": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+   "label_score": 8.399999618530273,
+   "argmax_vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+   "severa_vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+   "argmax_idx": [
+    2,
+    0,
+    0,
+    0,
+    2,
+    0,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "argmax_score": 6.699999809265137,
+   "severa_idx": [
+    2,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    2,
+    2,
+    2,
+    2
+   ],
+   "severa_score": 8.300000190734863,
+   "band_probs": [
+    0.0,
+    0.0,
+    0.07599999755620956,
+    0.9210000038146973,
+    0.003000000026077032
+   ],
+   "description": "OpenClaw before 2026.5.28 contains a credential exposure vulnerability where workspace dotenv files can override provider credentials. Attackers with lower-trust access to configured input paths can expose sensitive data and credentials that should remain within trusted boundaries."
+  }
+ ],
+ "n_worked_candidates": 411
+}

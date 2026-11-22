@@ -1,0 +1,267 @@
+{
+ "n": 46443,
+ "lambda": 0.25,
+ "0.05": {
+  "coverage": 0.00010765885063411063,
+  "answered": 5,
+  "answered_bands": {
+   "None": 0,
+   "Low": 0,
+   "Medium": 1,
+   "High": 4,
+   "Critical": 0
+  },
+  "GitHub": {
+   "n": 4584,
+   "coverage": 0.0
+  },
+  "Other": {
+   "n": 41852,
+   "coverage": 0.0
+  },
+  "VulnCheck": {
+   "n": 7,
+   "coverage": 0.7142857142857143
+  },
+  "coverage_with_v31": 0.00015693167195003296,
+  "coverage_without_v31": 0.0,
+  "top_answered_cnas": [
+   [
+    "disclosure@vulncheck.com",
+    5
+   ]
+  ]
+ },
+ "0.1": {
+  "coverage": 0.4856060116702194,
+  "answered": 22553,
+  "answered_bands": {
+   "None": 0,
+   "Low": 354,
+   "Medium": 7420,
+   "High": 11732,
+   "Critical": 3047
+  },
+  "GitHub": {
+   "n": 4584,
+   "coverage": 0.0
+  },
+  "Other": {
+   "n": 41852,
+   "coverage": 0.5387078275829112
+  },
+  "VulnCheck": {
+   "n": 7,
+   "coverage": 1.0
+  },
+  "coverage_with_v31": 0.7001977339066571,
+  "coverage_without_v31": 0.016732958441914688,
+  "top_answered_cnas": [
+   [
+    "secure@microsoft.com",
+    4100
+   ],
+   [
+    "secalert_us@oracle.com",
+    3278
+   ],
+   [
+    "audit@patchstack.com",
+    2446
+   ],
+   [
+    "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+    2039
+   ],
+   [
+    "security@wordfence.com",
+    2035
+   ],
+   [
+    "psirt@us.ibm.com",
+    1200
+   ],
+   [
+    "secalert@redhat.com",
+    808
+   ],
+   [
+    "psirt@adobe.com",
+    614
+   ]
+  ]
+ },
+ "0.15": {
+  "coverage": 0.5550244385590939,
+  "answered": 25777,
+  "answered_bands": {
+   "None": 0,
+   "Low": 532,
+   "Medium": 8163,
+   "High": 13703,
+   "Critical": 3379
+  },
+  "GitHub": {
+   "n": 4584,
+   "coverage": 0.0
+  },
+  "Other": {
+   "n": 41852,
+   "coverage": 0.6157411832170505
+  },
+  "VulnCheck": {
+   "n": 7,
+   "coverage": 1.0
+  },
+  "coverage_with_v31": 0.7693418285678416,
+  "coverage_without_v31": 0.08675078864353312,
+  "top_answered_cnas": [
+   [
+    "secure@microsoft.com",
+    4316
+   ],
+   [
+    "secalert_us@oracle.com",
+    3696
+   ],
+   [
+    "audit@patchstack.com",
+    2815
+   ],
+   [
+    "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+    2189
+   ],
+   [
+    "security@wordfence.com",
+    2084
+   ],
+   [
+    "psirt@us.ibm.com",
+    1347
+   ],
+   [
+    "secalert@redhat.com",
+    915
+   ],
+   [
+    "psirt@adobe.com",
+    626
+   ]
+  ]
+ },
+ "all_bands_predicted": {
+  "None": 7,
+  "Low": 869,
+  "Medium": 17017,
+  "High": 23619,
+  "Critical": 4931
+ },
+ "prov_x_v31": {
+  "0.05": {
+   "coverage": 0.00010765885063411063,
+   "answered": 5,
+   "calibrated_groups": [
+    "GitHub|nov31",
+    "Other|nov31",
+    "Other|v31",
+    "VulDB|v31",
+    "VulnCheck|nov31",
+    "VulnCheck|v31"
+   ],
+   "deploy_groups_without_calibration": [
+    "GitHub|v31"
+   ],
+   "GitHub|nov31": {
+    "n": 6,
+    "coverage": 0.0
+   },
+   "GitHub|v31": {
+    "n": 4578,
+    "coverage": 0.0
+   },
+   "Other|nov31": {
+    "n": 14576,
+    "coverage": 0.0
+   },
+   "Other|v31": {
+    "n": 27276,
+    "coverage": 0.0
+   },
+   "VulnCheck|v31": {
+    "n": 7,
+    "coverage": 0.7142857142857143
+   }
+  },
+  "0.1": {
+   "coverage": 0.5742738410524729,
+   "answered": 26671,
+   "calibrated_groups": [
+    "GitHub|nov31",
+    "Other|nov31",
+    "Other|v31",
+    "VulDB|v31",
+    "VulnCheck|nov31",
+    "VulnCheck|v31"
+   ],
+   "deploy_groups_without_calibration": [
+    "GitHub|v31"
+   ],
+   "GitHub|nov31": {
+    "n": 6,
+    "coverage": 0.0
+   },
+   "GitHub|v31": {
+    "n": 4578,
+    "coverage": 0.0
+   },
+   "Other|nov31": {
+    "n": 14576,
+    "coverage": 0.0
+   },
+   "Other|v31": {
+    "n": 27276,
+    "coverage": 0.9775626924769028
+   },
+   "VulnCheck|v31": {
+    "n": 7,
+    "coverage": 1.0
+   }
+  },
+  "0.15": {
+   "coverage": 0.5867622677260298,
+   "answered": 27251,
+   "calibrated_groups": [
+    "GitHub|nov31",
+    "Other|nov31",
+    "Other|v31",
+    "VulDB|v31",
+    "VulnCheck|nov31",
+    "VulnCheck|v31"
+   ],
+   "deploy_groups_without_calibration": [
+    "GitHub|v31"
+   ],
+   "GitHub|nov31": {
+    "n": 6,
+    "coverage": 0.0
+   },
+   "GitHub|v31": {
+    "n": 4578,
+    "coverage": 0.0
+   },
+   "Other|nov31": {
+    "n": 14576,
+    "coverage": 0.0
+   },
+   "Other|v31": {
+    "n": 27276,
+    "coverage": 0.9988268074497727
+   },
+   "VulnCheck|v31": {
+    "n": 7,
+    "coverage": 1.0
+   }
+  }
+ }
+}
