@@ -1,48 +1,85 @@
-"""Figure 1: architecture of SEVERA (vector PDF + PNG)."""
+"""Figure 1: architecture of SEVERA (vector PDF + PNG). Left band: any perception module; right band: the decision
+layer contributed by the paper; numbered cards with coloured header strips; outcomes on the right."""
 import os
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
+from matplotlib.patches import Rectangle, FancyBboxPatch, FancyArrowPatch, Circle
+import figstyle as fs
 
+fs.apply()
 OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "figures", "out")
 os.makedirs(OUT, exist_ok=True)
-plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 8})
-NAVY, BLUE, GREY, GREEN, ORANGE = "#17375E", "#DCE6F2", "#F2F2F2", "#E2EFDA", "#FCE4D6"
 
-fig, ax = plt.subplots(figsize=(7.2, 3.6))
-ax.set_xlim(0, 100); ax.set_ylim(0, 50); ax.axis("off")
-boxes = []
+fig = plt.figure(figsize=(7.2, 3.75))
+ax = fig.add_axes([0, 0, 1, 1]); ax.set_xlim(0, 100); ax.set_ylim(0, 52); ax.axis("off")
+STRIP = 3.4
 
 
-def box(x, y, w, h, title, lines, fc):
-    p = FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.3,rounding_size=1.2", fc=fc, ec=NAVY, lw=0.9)
-    ax.add_patch(p)
-    ax.text(x + w / 2, y + h - 2.2, title, ha="center", va="top", fontsize=8.2, fontweight="bold", color=NAVY)
-    ax.text(x + w / 2, y + h - 6.0, "\n".join(lines), ha="center", va="top", fontsize=6.9, linespacing=1.35)
-    boxes.append((x, y, w, h))
+def band(x, y, w, h, label, fc, color):
+    ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0,rounding_size=0.8", fc=fc, ec="none"))
+    ax.text(x + 1.2, y + h - 1.3, label, fontsize=7.6, fontfamily=fs.TEXT_M, color=color, va="top", ha="left")
 
 
-def arrow(x0, y0, x1, y1, label=None, dy=1.2):
-    ax.add_patch(FancyArrowPatch((x0, y0), (x1, y1), arrowstyle="-|>", mutation_scale=9, lw=0.9, color=NAVY))
-    if label:
-        ax.text((x0 + x1) / 2, (y0 + y1) / 2 + dy, label, ha="center", va="bottom", fontsize=6.3, color="#444444")
+def card(x, y, w, h, num, title, lines, color, size=7.3):
+    ax.add_patch(Rectangle((x, y), w, h, fc="white", ec="#BDBDBD", lw=0.6, zorder=2))
+    ax.add_patch(Rectangle((x, y + h - STRIP), w, STRIP, fc=color, ec="none", zorder=3))
+    tx = x + 1.2
+    if num:
+        ax.add_patch(Circle((x + 2.2, y + h - STRIP / 2), 1.25, fc="white", ec="none", zorder=4))
+        ax.text(x + 2.2, y + h - STRIP / 2 - 0.05, str(num), fontsize=7, fontfamily=fs.TEXT_M, color=color,
+                ha="center", va="center", zorder=5)
+        tx = x + 4.2
+    ax.text(tx, y + h - STRIP / 2 - 0.05, title, fontsize=8.2, fontfamily=fs.TEXT_M, color="white", va="center",
+            ha="left", zorder=5)
+    ax.text(x + 1.2, y + h - STRIP - 1.4, "\n".join(lines), fontsize=size, color=fs.INK, va="top", ha="left",
+            linespacing=1.38, zorder=5)
 
 
-box(1, 27, 16, 20, "New CVE record", ["description", "CNA CWE ids", "CNA CVSS v3.1", "(if any)"], GREY)
-box(22, 27, 18, 20, "Perception", ["LLM backbone", "(Qwen2.5-7B, QLoRA)", "+ 11 metric heads", r"$p_m(v_m \mid x)$"], BLUE)
-box(45, 27, 25, 20, "Inference engine", ["per-metric combination", "exact joint posterior over", "104,976 base vectors", "Bayes decision under the", "official v4.0 score"], BLUE)
-box(75, 27, 23, 20, "Abstention gate", ["band confidence c(x)", "threshold by Learn-then-", "Test, per provenance", "group: P(risk ≤ α) ≥ 1 − δ"], ORANGE)
-box(45, 2, 25, 19, "Knowledge base", ["K1 CWE → metric priors", "K2 v3.1 → v4.0 alignment", "K3 metric compatibility", "official score table", "(36 MacroVectors)"], GREEN)
-box(75, 2, 23, 19, "Output", ["answer: vector, CVSS-B,", "band, explanation", "abstain: route to analyst", "with the most uncertain", "metric"], GREY)
+def arrow(p0, p1, rad=0.0):
+    ax.add_patch(FancyArrowPatch(p0, p1, arrowstyle="-|>", mutation_scale=8, lw=0.9, color=fs.AXIS, zorder=6,
+                                 connectionstyle="arc3,rad=%s" % rad, shrinkA=0, shrinkB=0))
 
-arrow(17.6, 37, 21.4, 37)
-arrow(40.6, 37, 44.4, 37)
-arrow(70.6, 37, 74.4, 37)
-arrow(57.5, 21.6, 57.5, 26.4)
-arrow(86.5, 26.4, 86.5, 21.6)
-ax.text(59, 23.6, "rules and\npriors", fontsize=6.3, color="#444444", va="center")
-fig.tight_layout(pad=0.2)
+
+def note(x, y, text, va="bottom", ha="center", size=7.2, color=None):
+    ax.text(x, y, text, fontsize=size, color=color or fs.MUTED, ha=ha, va=va, zorder=7)
+
+
+BLUE, GREEN, ORANGE = fs.OI["blue"], fs.OI["green"], fs.OI["orange"]
+band(0.6, 1.2, 34.6, 49.6, "PERCEPTION  ·  any per-metric classifier", "#F1F3F5", fs.MUTED)
+band(36.4, 1.2, 63.0, 49.6, "SEVERA DECISION LAYER  ·  this work", fs.ACCENT_TINT, fs.ACCENT)
+
+card(2.2, 29, 14.6, 14.5, None, "CVE record", ["description", "CNA's CWE ids", "CNA's v3.1 vector", "(when present)"], "#7F7F7F")
+card(19.2, 29, 14.2, 14.5, 1, "Perception", ["TF-IDF, DeBERTa-v3", "or Qwen2.5-7B,", "11 metric heads", r"$p_m(v_m \mid x)$"], BLUE)
+card(38.2, 29, 21.6, 14.5, 3, "Inference engine", ["exact posterior over all", "104,976 base vectors;", "Bayes decision under", "the official v4.0 score"], fs.ACCENT)
+card(38.2, 5.0, 21.6, 13.5, 2, "Knowledge base", ["K1  CWE priors", "K2  v3.1 to v4.0 alignment", "K3  metric compatibility"], GREEN)
+card(63.0, 29, 16.8, 14.5, 4, "Abstention gate", ["band confidence c(x),", "Learn-then-Test", "threshold per group", "of CNAs"], ORANGE)
+card(63.0, 5.0, 16.8, 13.5, 5, "Explanation", ["the metric whose", "uncertainty moves most", "band probability"], "#7F7F7F", size=7.0)
+
+note(2.4, 24.5, "Trained once, on CVEs published\nbefore March 2026; returns one\nprobability vector per metric.\nSEVERA never retrains it.",
+     ha="left", va="top", size=7.0)
+# outcomes
+ax.add_patch(Rectangle((83.0, 34.0), 15.0, 9.5, fc="white", ec=GREEN, lw=1.0, zorder=2))
+ax.text(84.2, 42.2, "Answer", fontsize=8.2, fontfamily=fs.TEXT_M, color=GREEN, va="top")
+ax.text(84.2, 39.0, "vector, CVSS-B,\nband, explanation", fontsize=7.0, va="top", linespacing=1.35)
+ax.add_patch(Rectangle((83.0, 20.5), 15.0, 9.5, fc="white", ec=fs.ACCENT, lw=1.0, zorder=2))
+ax.text(84.2, 28.7, "Refer to analyst", fontsize=8.2, fontfamily=fs.TEXT_M, color=fs.ACCENT, va="top")
+ax.text(84.2, 25.5, "with the metric\nto check first", fontsize=7.0, va="top", linespacing=1.35)
+note(90.5, 9.0, r"$P(\mathrm{error} > \alpha) \leq \delta$", size=8.6, color=fs.ACCENT)
+note(90.5, 5.6, "for each group of CNAs", size=6.9, color=fs.ACCENT)
+
+arrow((16.8, 36.0), (19.2, 36.0))
+arrow((33.4, 36.0), (38.2, 36.0))
+arrow((49.0, 18.5), (49.0, 29.0))
+note(50.0, 23.6, "priors, alignment", ha="left", va="center", size=6.9)
+arrow((59.8, 37.5), (63.0, 37.5))
+note(61.4, 38.2, r"$\hat{v}$", size=8)
+arrow((59.8, 30.5), (63.0, 17.5))
+arrow((79.8, 38.75), (83.0, 38.75))
+note(81.5, 39.7, r"$c \geq \tau_g$", size=7.4)
+arrow((79.8, 31.0), (83.0, 25.25))
+note(81.0, 24.0, r"$c < \tau_g$", va="top", size=7.4)
+arrow((79.8, 12.0), (88.0, 20.5), rad=0.3)
 for ext in ("pdf", "png"):
-    fig.savefig(os.path.join(OUT, f"fig1_architecture.{ext}"), dpi=300, bbox_inches="tight")
+    fig.savefig(os.path.join(OUT, f"fig1_architecture.{ext}"), dpi=300)
 print("saved")
