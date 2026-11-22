@@ -1,0 +1,5 @@
+data/*.jsonl
+data/*.json
+data/raw_nvd/
+__pycache__/
+*.pyc

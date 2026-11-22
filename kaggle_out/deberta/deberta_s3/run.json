@@ -1,0 +1,16 @@
+{
+ "data": "/kaggle/input/<private-dataset>/splits.jsonl",
+ "backbone": "deberta",
+ "model": "microsoft/deberta-v3-base",
+ "seed": 3,
+ "epochs": 3.0,
+ "lr": null,
+ "bs": 16,
+ "accum": 1,
+ "max_len": 384,
+ "use_v31": 1,
+ "train_limit": 0,
+ "out": "/kaggle/working/deberta_s3",
+ "n_train": 19506,
+ "minutes": 36.22088426351547
+}
