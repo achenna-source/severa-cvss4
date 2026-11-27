@@ -1,4 +1,4 @@
-# Knowing When Not to Score: Certified CVSS v4.0 Prediction for Newly Disclosed Vulnerabilities
+# Knowing When Not to Score: Automated CVSS v4.0 Vector Assignment with Risk-Controlled Abstention
 
 Code, data and predictions of SEVERA, the method of the paper.
 
